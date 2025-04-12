@@ -1,0 +1,38 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Словарь
+{% endblock %}
+
+{% block page-lead %}
+
+{% endblock %}
+
+{% block content %}
+<div class="container px-4 py-5" id="terms-table">
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col" class="py-3">#</th>
+              <th scope="col" class="py-3">Слово</th>
+              <th scope="col" class="py-3">Определение</th>
+              <th scope="col" class="py-3">Перевод</th>
+              <th scope="col" class="py-3">Сфера</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for cnt, word, definition, translation, sphere in definitions %}
+            <tr>
+                <td class="py-3">{{ cnt }}</td>
+                <td class="py-3">{{ word }}</td>
+                <td class="py-3">{{ definition }}</td>
+                <td class="py-3">{{ translation }}</td>
+                <td class="py-3">{{ sphere }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+</div>
+{% endblock %}

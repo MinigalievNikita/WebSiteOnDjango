@@ -1,0 +1,10 @@
+CPU;central processing unit: the part of a computer that controls all the other parts;ЦПУ;IT;Nikita
+database;information stored in a computer in an organized structure so that it can be searched in different ways;база данных;IT;павел
+equation;a mathematical statement that shows two amounts are equal using mathematical symbols;уравнение;Math;user2
+subtraction;to take a number or amount away from another number or amount;вычитание;Math;никита
+photosynthesis;the process by which a plant uses carbon dioxide from the air, water from the ground, and the energy from the light of the sun to produce its own food and oxygen;фотосинтез;Other;user6
+masterpiece;a painting, book, or film that is generally considered to be of excellent quality;шедевр;Other;лев
+telemetry;the science or process of collecting information about objects that are far away and sending the information somewhere electronically;телеметрия;Physics;user5
+rocket;a tube-shaped vehicle for travelling in space;ракета;Physics;user4
+phenomenon;something that exists or happens, usually something unusual;феномен;Physics;user1
+thrust;a strong push or the power used to push something forward;тяга;Physics;user3

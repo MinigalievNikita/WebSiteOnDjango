@@ -1,0 +1,33 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Проверка знания определния слова
+{% endblock %}
+
+{% block page-lead %}
+Будет дано случайное определение из той сферы, которую вы выберете ниже
+{% endblock %}
+
+{% block content %}
+<div class="container-sm px-1 py-3 ms" id="word-check">
+    <form method="post" id="sphere_choose">
+        <div class="shadow row px-5 py-4">
+            <h3>Выбор сферы, определение из которой хотите получить:</h3>
+            <div class="row py-3">
+                <div class="col-md-10">
+                    <label for="sphere">Выбор сферы из списка </label>
+                    <select class="form-control" id="sphere" form="sphere_choose" name="chosen_sphere" required>
+                      <option value="Math">Math</option>
+                      <option value="Physics">Physics</option>
+                      <option value="IT">IT</option>
+                      <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="pt-4">
+                <button type="submit" class="btn btn-primary" formaction="/definition-check")>Подтвердить</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

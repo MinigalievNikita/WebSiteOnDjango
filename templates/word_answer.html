@@ -1,0 +1,19 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Ваш ответ <span class='fst-italic'>{{ comment }}</span> оказался {% if success %}<span class='text-success'>абсолютно верным</span>{% else %}<span class='text-danger'>ошибочным</span>{% endif %}.
+{% endblock %}
+
+{% block page-lead %}
+{% endblock %}
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="definition-form-result">
+    <h2 class="pb-2 border-bottom">Что можно сделать?</h2>
+    <ul>
+        <li>заполнить <a href="/add-word">форму</a> ещё раз,</li>
+        <li>вернуться на <a href="/">главную,</a></li>
+        <li>проверить свои знания еще раз в <a href="/definition-check">игре</a></li>
+    </ul>
+</div>
+{% endblock %}

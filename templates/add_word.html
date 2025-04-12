@@ -1,0 +1,69 @@
+{% extends "base_page.html" %}
+
+
+{% block page-title %}
+Форма для заполнения словаря
+{% endblock %}
+
+
+{% block page-lead %}
+Убедительная просьба <span class="fst-italic">внимательно</span> отнеситесь к заполнению формы, чтобы вам и другим людям
+было приятно смотреть в словарь с точными оределениями и переводами слов
+{% endblock %}
+
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="definition-form">
+    <form class="needs-validation" method="post" id="add_form">
+        <div class="row px-5 py-2">
+            <h3>Ваши контактные данные</h3>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-4">
+                <label for="name">Ваше имя:</label>
+                <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Иван" value required>
+            </div>
+            <div class="col-md-6">
+                <label for="email">Ваш контактный email:</label>
+                <input type="email" class="form-control input-lg" name="email" id="email" placeholder="ivan@ivanov.com" value required>
+            </div>
+        </div>
+        <div class="row px-5 py-2">
+            <h3>Ваше слово</h3>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-4">
+                <label for="new_word">Слово</label>
+                <input type="text" class="form-control input-lg" name="new_word" id="new_word" placeholder="equation" value required>
+            </div>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-10">
+                <label for="new_definition">Определние слова из словаря <a href="https://dictionary.cambridge.org/dictionary/english-russian">Cambridge</a></label>
+                <textarea type="text" class="form-control input-lg" name="new_definition" id="new_definition" aria-describedby="definition_note" rows="3" spellcheck="true"></textarea>
+                <div id="definition_note" class="form-text">Постарайтесь уложиться в максимум два предложения</div>
+            </div>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-10">
+                <label for="new_translation">Перевод из <a href="https://translate.google.com/?hl=ru&sl=en&tl=ru&op=translate">Google</a></label>
+                <textarea type="text" class="form-control input-lg" name="new_translation" id="new_translation" aria-describedby="Translation_note" rows="1" spellcheck="true"></textarea>
+            </div>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-10">
+                <label for="sphere">Определите сферу из списка </label>
+                <select class="form-control" id="sphere" form="add_form" name="sphere" required>
+                  <option value="Math">Math</option>
+                  <option value="Physics">Physics</option>
+                  <option value="IT">IT</option>
+                  <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="row px-5 py-2">
+            <button class="btn btn-primary" type="submit" formaction="/send-definition">Отправить</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

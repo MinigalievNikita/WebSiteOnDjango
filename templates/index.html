@@ -1,0 +1,69 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Английский язык для научной работы
+{% endblock %}
+
+{% block page-lead %}
+Это страничка проекта про изучение английского языка. <br/>
+{% endblock %}
+
+{% block content %}
+<div class="container px-4 py-5" id="project-contents">
+    <h2 class="pb-2 text-center text-info">Возможности и наполнение проекта</h2>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Словарь <img src="https://cdn-icons-png.flaticon.com/512/2219/2219075.png" alt="Словарь" width="48" height="38"/>
+            </h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">Список терминов</h1>
+            <ul class="list-unstyled mt-1 mb-3 pb-5">
+              <li>Здесь находятся:</li>
+              <li>Определения на английском языке</li>
+              <li>Перевод на русский язык</li>
+              <li></li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary" onclick="document.location='/words-list'">Изучить</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Добавление новых слов <img src="https://cdn-icons-png.flaticon.com/128/4223/4223752.png" alt="Форма" width="32" height="32"/>
+            </h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">Форма для заполнения</h1>
+            <ul class="list-unstyled mt-1 mb-3">
+              <li>Необходимо найти:</li>
+              <li>Определение в словаре Cambridge</li>
+              <li>Перевод в Google</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary" onclick="document.location='/add-word'">Внести слово</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Проверка знаний <img src="https://cdn-icons-png.flaticon.com/128/6265/6265827.png" alt="Проверка" width="32" height="32"/>
+            </h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">Написание слово по определению</h1>
+            <ul class="list-unstyled mt-1 mb-3">
+              <li>Необходимо ввести слово</li>
+              <li>Помогает быстро запоминать</li>
+              <li>Тестируйте себя раз в неделю</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary" onclick="document.location='/definition-check'">Сыграть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}

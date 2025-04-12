@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block pagetitle %}{% endblock %}</title>
+    <!-- load static -->
+    {% load static %}
+    <!-- CSS -->
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="apple-touch-icon" href="{% static 'favicon.png' %}" sizes="32x32">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+
+</head>
+<body>
+<main>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <h5 class="my-0 mr-md-auto front-weight-normal text-success">NikitaSolutions</h5>
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/">Главная</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/about-project">О проекте</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/guide-help">Помощь</a>
+      </nav>
+    </div>
+    <div class="container">
+        <header class="border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none ">
+                <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                    <img src="{% static 'GBFlag.svg' %}" alt="Изучение английского языка" width="32" height="32"/>
+                    <span>Проект про изучение технического анлийского языка</span>
+                </div>
+            </a>
+        </header>
+        <div class="align-items-center p-5 mb-4 border border-danger bg-success-subtle rounded-1" id="title-box">
+            <div class="container-fluid py-5">
+                <h1 class="display-1 fw-bold text-center">{% block page-title %}{% endblock %}</h1>
+                <p class="py-3 fs-3 text-center">{% block page-lead %}{% endblock %}</p>
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+        <footer class="footer pt-3 mt-4 text-muted border-top">© 2025</footer>
+    </div>
+</main>
+</body>
+</html>
